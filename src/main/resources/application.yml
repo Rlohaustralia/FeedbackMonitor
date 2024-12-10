@@ -4,3 +4,6 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://raeojin:8division2024@cluster0.tyvzi.mongodb.net/feedback-monitor-db?retryWrites=true&w=majority&appName=Cluster0
+youtube:
+  api:
+    key: AIzaSyBthoR5yKnHRjpfVIlsr-bz8Dmbp5ayRDA
