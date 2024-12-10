@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>My Page - Keywords</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-left-container">
+        <a href="/home" class="logo">
+            <span class="doto-logo">Feedback Monitor</span>
+        </a>
+    </div>
+    <nav class="header-center-container">
+        <a href="/feedback" class="nav">📩 You have new feedback from your customers!</a>
+    </nav>
+    <div class="header-right-container">
+        <div class="user-actions">
+            <a href="/logout" class="btn">Logout</a>
+            <a href="/mypage" class="btn">My Page</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <div class="image-container">
+            <a href="/mypage">
+                <img class="myPage-bg" src="/images/keywords.jpg" alt="Keywords">
+                <div class="overlay">Keywords</div>
+            </a>
+        </div>
+
+        <!-- Keywords Management Section -->
+        <section class="keywords-management">
+            <p> You can manage your keywords here.</p>
+
+            <!-- Keyword Add Form -->
+            <div class="add-keyword">
+                <form action="/mypage/keywords" method="POST">
+                    <input type="text" id="new-keyword" name="new-keyword" placeholder="Add keyword">
+                    <button type="submit" class="btn">➕</button>
+                </form>
+            </div>
+
+            <!-- Keywords Table -->
+            <table class="feedback-table">
+                <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>🔑 Keyword</th>
+                    <th>🖊️ Action</th>
+                    <th>❌ Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Example for one keyword (dynamically populated) -->
+                <tr>
+                    <td>1</td>
+                    <td>Fast delivery</td>
+                    <td><a href="/mypage/keywords/update/1" class="btn">Update</a></td>
+                    <td>
+                        <form action="/mypage/keywords/delete/1" method="POST">
+                            <button type="submit" class="btn delete-btn">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <!-- Add more keywords dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+
+    </div>
+</main>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Feedback Monitor. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+
+</html>

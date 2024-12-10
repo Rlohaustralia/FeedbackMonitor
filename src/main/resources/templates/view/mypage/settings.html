@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>My Page - Settings</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-left-container">
+        <a href="/home" class="logo">
+            <span class="doto-logo">Feedback Monitor</span>
+        </a>
+    </div>
+    <nav class="header-center-container">
+        <a href="/feedback" class="nav">📩 You have new feedback from your customers!</a>
+    </nav>
+    <div class="header-right-container">
+        <div class="user-actions">
+            <a href="/logout" class="btn">Logout</a>
+            <a href="/mypage" class="btn">My Page</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <div class="image-container">
+            <a href="/mypage">
+                <img class="myPage-bg" src="/images/account.jpg" alt="Account">
+                <div class="overlay">Account</div>
+            </a>
+        </div>
+        <!-- Account Section -->
+        <section class="account-section">
+            <p> You can view and manage your account information here.</p>
+
+            <table class="feedback-table">
+                <thead>
+                <tr>
+                    <th>👤 Username</th>
+                    <th>📧 Email</th>
+                    <th>📅 Account Created</th>
+                    <th>⚙️ Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>user123</td>
+                    <td>user123@example.com</td>
+                    <td>2023-05-01</td>
+                    <td>
+                        <a href="/mypage/change-password" class="btn">Change Password</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    </div>
+</main>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Feedback Monitor. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+
+</html>

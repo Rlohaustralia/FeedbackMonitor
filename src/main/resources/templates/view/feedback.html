@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-left-container">
+        <a href="/home" class="logo">
+            <span class="doto-logo">Feedback Monitor</span>
+        </a>
+    </div>
+    <nav class="header-center-container">
+        <a href="/feedback" class="nav">Track all your brand-related feedback from all platforms in one dashboard </a>
+    </nav>
+    <div class="header-right-container">
+        <div class="user-actions">
+            <a href="/logout" class="btn">Logout</a>
+            <a href="/mypage" class="btn">My Page</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <p>Here are the detailed feedback entries from your customers.</p>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <input type="text" id="filter-timestamp" placeholder="Search by Timestamp">
+            <select id="filter-platform">
+                <option value="">Select Platform</option>
+                <option value="Instagram">Instagram</option>
+                <option value="YouTube">YouTube</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Facebook">Blog</option>
+                <option value="Facebook">Community</option>
+            </select>
+            <input type="text" id="filter-keywords" placeholder="Search by Keywords">
+            <input type="text" id="filter-author" placeholder="Search by Author">
+            <button id="apply-filters" class="btn">🔍</button>
+        </div>
+
+        <table class="feedback-table">
+            <thead>
+            <tr>
+                <th>📂</th>
+                <th>⏱ Timestamp</th>
+                <th>📱 Platform</th>
+                <th>🗝️ Keywords</th>
+                <th>🗨️ Feedback</th>
+                <th>𖠋 Author</th>
+                <th>↪ URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="1"></td>
+                <td>2024-11-18 10:30 AM</td>
+                <td>Instagram</td>
+                <td>Quick delivery</td>
+                <td>Loved the fast shipping, great service!</td>
+                <td>@customer123</td>
+                <td><a href="https://instagram.com/post/12345" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="2"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="3"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="4"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="5"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="6"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="7"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="8"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="9"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="saveFeedback" value="10"></td>
+                <td>2024-11-17 2:15 PM</td>
+                <td>YouTube</td>
+                <td>Product quality</td>
+                <td>The quality exceeded my expectations.</td>
+                <td>John Doe</td>
+                <td><a href="https://youtube.com/video/67890" target="_blank">Link</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="user-actions">
+            <button id="export-excel" class="btn">Export to Excel</button>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Feedback Monitor. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
