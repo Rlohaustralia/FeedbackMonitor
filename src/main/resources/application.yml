@@ -4,6 +4,11 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://raeojin:8division2024@cluster0.tyvzi.mongodb.net/feedback-monitor-db?retryWrites=true&w=majority&appName=Cluster0
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
 youtube:
   api:
     key: AIzaSyBthoR5yKnHRjpfVIlsr-bz8Dmbp5ayRDA

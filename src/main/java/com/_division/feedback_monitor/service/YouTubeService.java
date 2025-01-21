@@ -1,12 +1,15 @@
 package com._division.feedback_monitor.service;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.google.api.services.youtube.YouTube;
+import com.google.api.client.util.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
-import javax.imageio.spi.IIORegistry;
 
 @Service
 public class YouTubeService {
+
+    @Value("${youtube.api.key}")
+    private String apiKey;
+
 
 }

@@ -63,13 +63,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                <!-- Example for one keyword (dynamically populated) -->
                 <tr>
                     <td>1</td>
                     <td>Fast delivery</td>
-                    <td><a href="/mypage/keywords/update/1" class="btn">Update</a></td>
+                    <td><form action="/mypage/keywords/updated" method="POST">
+                        <button type="submit" class="btn delete-btn">Update</button>
+                    </form></td>
                     <td>
-                        <form action="/mypage/keywords/delete/1" method="POST">
+                        <form action="/mypage/keywords/deleted" method="POST">
                             <button type="submit" class="btn delete-btn">Delete</button>
                         </form>
                     </td>
